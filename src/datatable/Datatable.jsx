@@ -39,7 +39,9 @@ const Datatable = () => {
     setLoading(true);
     const fetchUsers = async () => {
       try {
-        const response = await axios.get("http://localhost:5555/user");
+        const response = await axios.get(
+          "https://se3-python-projects-backend.onrender.com/user"
+        );
         console.log(response.data.data);
         setUsers(response.data.data);
         setLoading(false);
