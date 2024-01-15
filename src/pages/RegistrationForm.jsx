@@ -13,9 +13,7 @@ const RegistrationForm = () => {
 
   const onSubmit = (data) => {
     axios
-      .post("https://se3-python-projects-backend.onrender.com/user", {
-        ...data,
-      })
+      .post("http://localhost:5555/user", { ...data })
       .then(() => {
         toast.success("Registration successful", {
           position: "top-right",
