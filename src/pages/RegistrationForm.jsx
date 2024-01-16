@@ -64,7 +64,7 @@ const RegistrationForm = () => {
               type="text"
               id="name"
               {...register("name", { required: true })}
-              className="input-field"
+              className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300"
             />
             {errors.name && (
               <span className="text-red-500">Name is required</span>
@@ -81,7 +81,7 @@ const RegistrationForm = () => {
               type="text"
               id="project_name"
               {...register("project_name", { required: true })}
-              className="input-field"
+              className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300"
             />
             {errors.project_name && (
               <span className="text-red-500">Name of project is required</span>
@@ -97,7 +97,7 @@ const RegistrationForm = () => {
             <textarea
               id="description"
               {...register("description", { required: true })}
-              className="input-field"
+              className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300"
               rows="4"
             />
             {errors.description && (
