@@ -64,7 +64,7 @@ const RegistrationForm = () => {
               type="text"
               id="name"
               {...register("name", { required: true })}
-              className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300"
+              className="input-field"
             />
             {errors.name && (
               <span className="text-red-500">Name is required</span>
@@ -75,16 +75,33 @@ const RegistrationForm = () => {
               htmlFor="project_name"
               className="block text-sm font-medium text-gray-600"
             >
-              Name of project
+              Name of project:
             </label>
             <input
               type="text"
               id="project_name"
               {...register("project_name", { required: true })}
-              className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300"
+              className="input-field"
             />
             {errors.project_name && (
               <span className="text-red-500">Name of project is required</span>
+            )}
+          </div>
+          <div className="mb-4">
+            <label
+              htmlFor="description"
+              className="block text-sm font-medium text-gray-600"
+            >
+              Project Description:
+            </label>
+            <textarea
+              id="description"
+              {...register("description", { required: true })}
+              className="input-field"
+              rows="4"
+            />
+            {errors.description && (
+              <span className="text-red-500">Description is required</span>
             )}
           </div>
 
